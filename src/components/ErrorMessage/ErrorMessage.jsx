@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
-const ErrorMessage = () => {
-  return <div>ErrorMessage</div>;
+const ErrorMessage = ({ IsError }) => {
+  useEffect(() => {
+    if (IsError) {
+      toast.error('Try again later...');
+    }
+  }, [IsError]);
+
+  return <Toaster />;
 };
 
 export default ErrorMessage;

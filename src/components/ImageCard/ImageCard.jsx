@@ -1,12 +1,21 @@
 import React from 'react';
 import st from './ImageCard.module.css';
 
-const ImageCard = ({ picture }) => {
+const ImageCard = ({ picture, onImageClick }) => {
+  const handleClick = e => {
+    e.preventDefault();
+    onImageClick(picture);
+  };
+
   return (
     <li className={st.card}>
-      <div className={st.galleryimage}>
-        <img src={picture.urls.small} alt="photo" className={st.gallerylink} />
-      </div>
+      <a
+        className={st.gallerylink}
+        href={picture.urls.regular}
+        onClick={handleClick}
+      >
+        <img src={picture.urls.small} alt="photo" className={st.galleryimage} />
+      </a>
     </li>
   );
 };
