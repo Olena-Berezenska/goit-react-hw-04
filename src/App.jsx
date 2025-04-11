@@ -111,6 +111,7 @@ const App = () => {
         pagesDiff={pagesDiff}
         OnClickLoadMore={HandleLoadMore}
         loading={loading}
+        picts={picts}
       />
       <ErrorMessage IsError={IsError} />
       <ImageModal
