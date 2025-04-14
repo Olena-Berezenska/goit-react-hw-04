@@ -14,7 +14,7 @@ const App = () => {
   const [loading, setloading] = useState(false);
   const [IsError, setIsError] = useState(false);
 
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const [selectedImage, setSelectedImage] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -52,7 +52,7 @@ const App = () => {
 
   const handleChangeQuery = newQuery => {
     setquery(newQuery);
-    // setPage(0);
+    setPage(1);
     setPicts([]);
   };
   const HandleLoadMore = () => {
